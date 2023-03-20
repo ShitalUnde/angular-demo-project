@@ -1,0 +1,76 @@
+ <div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div  fxFlex="20%" fxFlex.sm="100%" fxFlex.xs="100%">
+      <mat-card class="mat-elevation-z4 card" >
+        <mat-card-header>
+          <img class="img-card" src={{userObj.profile}}>
+        </mat-card-header>
+        <mat-card-content>
+          <p> <strong>{{userObj.name}}</strong> </p>
+          <p> {{userObj.location}} </p>
+          <div fxLayoutAlign="space-around center" *ngIf="userObj.isPremiumMember">
+            <span class="premium"><mat-icon>star</mat-icon> </span>
+            <span class="premium"><mat-icon>star</mat-icon> </span>
+            <span class="premium" [style.marginRight.px]="3"><mat-icon>star</mat-icon> </span>
+            <span> Premium Member </span>
+          </div>
+          <div>
+            <hr>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="router-link-active" fxLayoutAlign="space-around center">
+            <span [style.marginRight.px]="10"><mat-icon> mail </mat-icon> </span>
+              <span fxLayoutGap="20px">  Send an Email </span>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div [style.marginRight.px]="10"  fxFlex="75%" fxFlex.sm="100%" fxFlex.xs="100%">
+      <mat-card>
+        <mat-toolbar>
+          Business Detail
+        </mat-toolbar>
+        <mat-card-header>
+          <p fxLayoutGap="10px" fxLayoutAlign="space-around center"> <mat-icon>person</mat-icon> <strong>Profile</strong></p>
+          <div fxLayout="row" fxFlex fxLayoutAlign="end center" >
+              <button class="btn-bg" mat-raised-button (click)="openDialog('0ms', '0ms')">Edit Profile</button>
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+          <div style="overflow-x:auto;">
+          <table>
+            <tr>
+              <td class="table-title">Name :</td>
+              <td class="table-info">{{professionalObj.name}} </td>
+            </tr>
+            <tr>
+              <td class="table-title">Domain :</td>
+              <td class="table-info">{{professionalObj.domain}} </td>
+            </tr>
+            <tr>
+              <td class="table-title">Gender :</td>
+              <td class="table-info">{{professionalObj.gender}}</td>
+            </tr>
+            <tr>
+              <td class="table-title">Date of Birth :</td>
+              <td class="table-info">{{professionalObj.dob | dateFormatter : dateFormat.Do_MMM_YYYY}}</td>
+            </tr>
+            <tr>
+              <td class="table-title">Phone Number :</td>
+              <td class="table-info">{{professionalObj.countryCode}} {{professionalObj.phone}}</td>
+            </tr>
+            <tr>
+              <td  class="table-title">Location :</td>
+              <td class="table-info">{{professionalObj.location}}</td>
+            </tr>
+          </table>
+        </div>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  </div>

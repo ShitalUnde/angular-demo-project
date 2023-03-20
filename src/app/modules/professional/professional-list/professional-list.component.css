@@ -1,0 +1,95 @@
+/* .tp-card{
+  width: 300px;
+  height:350px;
+  margin-left: 20px;
+} */
+
+.container {
+  padding: 5px;
+  height: 100vh;
+  margin: 20px;
+ }
+
+.img-card{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: bisque;
+}
+  .card{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  }
+
+  .profile-card{
+  width: 900px;
+  height:350px;
+  margin-left: 20px;
+  }
+
+
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px;
+}
+
+
+
+  .grid-item {
+    background-color: lightsalmon;
+    border-radius: 5px;
+    padding: 10px;
+    height: 100px;
+  }
+
+  .btn-bg{
+    background-color: rgb(235, 61, 61);
+    color: white;
+  }
+
+  .space-between-container {
+    border: 1px solid #808080;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  .flex-container {
+    border: 1px solid #808080;
+    display: flex;
+  }
+
+  .mat-toolbar {
+    background:rgb(209, 217, 198);
+    color: #000;
+  }
+
+ td {
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+
+.table-info{
+  padding-left: 50px;
+  color: rgb(55, 52, 52);
+}
+.table-title{
+  color: #000;
+  font-weight: bold;
+}
+
+.premium{
+  color: rgb(233, 233, 14)
+}
+
+@media screen and (max-width: 600px) {
+  .content > mat-card {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}

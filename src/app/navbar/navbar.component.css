@@ -1,0 +1,30 @@
+.example-spacer {
+  flex: 1 0 auto;
+}
+
+/* .router-link-active{
+  color:red
+} */
+
+.example-spacer-right {
+  flex: 0 0 auto;
+}
+
+.img-card-nav{
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 50%;
+  background-color: bisque;
+  display: flex;
+}
+
+
+.mat-toolbar {
+  background: #fff;
+  color: #000;
+}
+
+.btn-bg{
+  background-color: rgb(235, 61, 61) !important;
+  color: white !important;
+}

@@ -1,0 +1,15 @@
+
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px;
+}
+
+.card{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  }

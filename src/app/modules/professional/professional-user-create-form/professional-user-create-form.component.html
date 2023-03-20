@@ -1,0 +1,81 @@
+
+<mat-card>
+  <mat-card-content>
+    <form fxLayout="column" [formGroup]="myForm">
+      <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Enter Name</mat-label>
+          <input matInput type="text" placeholder="Name" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Enter Domain</mat-label>
+          <input matInput type="text" placeholder="Domain" formControlName="domain">
+        </mat-form-field>
+      </div>
+
+      <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Enter Phone Number</mat-label>
+          <span matPrefix>&nbsp; {{countryCode.India}} &nbsp;</span>
+          <input matInput type="text" placeholder="Name" formControlName="phone">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Select Date of Birth</mat-label>
+          <input
+          matInput
+          readonly
+          [matDatepicker]="picker"
+          [max]="toDay"
+          placeholder="Date of birth"
+          formControlName="dob"
+          (dateChange)="date($event)"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="input-row">
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Enter Location</mat-label>
+          <input matInput  type="text"  placeholder="Location" formControlName="location">
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="column" fxFlex="40" fxFlexFill fxLayoutAlign="space-between stretch">
+        <mat-label>Select Gender</mat-label>
+        <mat-radio-group
+        formControlName="gender"
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group">
+          <div fxLayout="column" fxFlex="50px">
+            <mat-radio-button class="example-radio-button" *ngFor="let gender of Genders" [value]="gender">
+              {{gender}}
+            </mat-radio-button>
+          </div>
+      </mat-radio-group>
+      </div>
+
+      <div fxFlex="100" style="float: right; text-align:right;">
+        <button mat-raised-button color="warn" class="m-t-8" (click)="closeForm()">CLOSE</button>&nbsp;
+        <button mat-raised-button style="background-color:rgb(60, 179, 113); color:white" class="m-t-8" (click)="saveForm()">Update</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>
+
+
+<!-- <div>
+        <mat-label>Select Gender</mat-label>
+        <mat-radio-group
+        formControlName="gender"
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group">
+          <mat-radio-button class="example-radio-button" *ngFor="let gender of Genders" [value]="gender">
+            {{gender}}
+          </mat-radio-button>
+      </mat-radio-group>
+      </div> -->
