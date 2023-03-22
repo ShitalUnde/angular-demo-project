@@ -62,3 +62,9 @@ export const DateFormat =  {
 export const CountryCode = {
   India : '+91'
 }
+
+export interface WeatherData{
+  temperature: number,
+  windSpeed: number,
+  skyCondition:string
+}

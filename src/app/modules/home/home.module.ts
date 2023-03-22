@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 
 import { MaterialModule } from 'src/app/Common/ang-material.module';
 import { CommonApp } from 'src/app/Common/common-app.module';
+import { TemplateOutletModule } from '../template-outlet/template-outlet.module';
 
 @NgModule({
   declarations: [
@@ -15,11 +16,13 @@ import { CommonApp } from 'src/app/Common/common-app.module';
     CommonModule,
     HomeRoutingModule,
     MaterialModule,
-    CommonApp
+    CommonApp,
+    TemplateOutletModule
   ],
   exports:[
     MaterialModule,
-    CommonApp
+    CommonApp,
+    TemplateOutletModule
   ]
 })
 export class HomeModule { }

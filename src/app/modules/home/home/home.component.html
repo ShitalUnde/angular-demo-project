@@ -1,1 +1,21 @@
 <app-displaymsg ></app-displaymsg>
+
+<app-template-outlet [headerTemplate]="homeHeader" [contentTemplate]="homeContent" [actionTemplate]="homeActions"></app-template-outlet>
+
+<ng-template #homeHeader>
+  <mat-card-title>
+    Today's Weather
+  </mat-card-title>
+</ng-template>
+
+<ng-template #homeContent let-state>
+  <mat-card-content>
+     <b>{{state.data.temperature}}^C - <span>{{state.data.skyCondition ==='sunny' ? '*' : '@'}}</span> -
+     <span>{{state.data.windSpeed}} n/s</span>
+    </b>
+  </mat-card-content>
+</ng-template>
+
+<ng-template #homeActions >
+  <button class="btn-bg" style="margin: 20px;" (click)="reload()" mat-raised-button>Reload</button>
+</ng-template>

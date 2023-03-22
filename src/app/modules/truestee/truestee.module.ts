@@ -5,6 +5,7 @@ import { TruesteeRoutingModule } from './truestee-routing.module';
 import { TrusteeComponent } from './trustee/trustee.component';
 import { MaterialModule } from 'src/app/Common/ang-material.module';
 import { CommonApp } from 'src/app/Common/common-app.module';
+import { TemplateOutletModule } from '../template-outlet/template-outlet.module';
 
 
 @NgModule({
@@ -15,11 +16,13 @@ import { CommonApp } from 'src/app/Common/common-app.module';
     CommonModule,
     TruesteeRoutingModule,
     MaterialModule,
-    CommonApp
+    CommonApp,
+    TemplateOutletModule
   ],
   exports:[
     MaterialModule,
-    CommonApp
+    CommonApp,
+    TemplateOutletModule
   ]
 })
 export class TruesteeModule { }
